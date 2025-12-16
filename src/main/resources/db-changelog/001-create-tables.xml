@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="dmytrotymosh" id="create-schema">
+        <createTable tableName="workshops">
+            <column name="id" type="uuid">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="code" type="varchar(256)">
+                <constraints unique="true" nullable="false"/>
+            </column>
+            <column name="height" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="width" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="length" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="floor_load_capacity" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="voltage" type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="available_power" type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created" type="timestamp"/>
+            <column name="updated" type="timestamp"/>
+        </createTable>
+        <createIndex tableName="workshops" indexName="idx_workshop_code">
+            <column name="code"/>
+        </createIndex>
+        <createTable tableName="cnc_machines">
+            <column name="id" type="uuid">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="workshop_id" type="uuid">
+                <constraints nullable="false"
+                             foreignKeyName="FK_cnc_machine_workshop"
+                             referencedTableName="workshops"
+                             referencedColumnNames="id"/>
+            </column>
+            <column name="maker" type="varchar(64)"/>
+            <column name="country_of_origin" type="varchar(64)"/>
+            <column name="model" type="varchar(64)"/>
+            <column name="length" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="width" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="height" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="weight" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="table_work_area" type="double"/>
+            <column name="max_power_consumption" type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="voltage" type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="command_language" type="varchar(64)"/>
+            <column name="operating_system" type="varchar(64)"/>
+            <column name="created" type="timestamp"/>
+            <column name="updated" type="timestamp"/>
+        </createTable>
+        <createIndex tableName="cnc_machines" indexName="idx_cnc_machine_workshop_id">
+            <column name="workshop_id"/>
+        </createIndex>
+    </changeSet>
+</databaseChangeLog>

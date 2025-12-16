@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet id="insert-workshops" author="dmytrotymosh">
+        <insert tableName="workshops">
+            <column name="id" value="b49336d1-2c12-43e9-9de1-d2847fafd2bc"/>
+            <column name="code" value="UA-1991"/>
+            <column name="height" valueNumeric="200."/>
+            <column name="width" valueNumeric="10000."/>
+            <column name="length" valueNumeric="15000."/>
+            <column name="floor_load_capacity" valueNumeric="2500"/>
+            <column name="voltage" valueNumeric="380"/>
+            <column name="available_power" valueNumeric="3000"/>
+            <column name="created" valueDate="2024-01-01T10:00:00"/>
+            <column name="updated" valueDate="2024-01-01T10:00:00"/>
+        </insert>
+        <insert tableName="workshops">
+            <column name="id" value="3187419d-e136-4915-995b-4c6fe8d6d339"/>
+            <column name="code" value="UA-1992"/>
+            <column name="height" valueNumeric="5000."/>
+            <column name="width" valueNumeric="12000."/>
+            <column name="length" valueNumeric="8000."/>
+            <column name="floor_load_capacity" valueNumeric="2600"/>
+            <column name="voltage" valueNumeric="220"/>
+            <column name="available_power" valueNumeric="4000"/>
+            <column name="created" valueDate="2024-01-01T10:00:00"/>
+            <column name="updated" valueDate="2024-01-01T10:00:00"/>
+        </insert>
+        <insert tableName="workshops">
+            <column name="id" value="a2b4a517-a4ad-4d7e-abbb-a05d01884e64"/>
+            <column name="code" value="UA-1993"/>
+            <column name="height" valueNumeric="3000"/>
+            <column name="width" valueNumeric="8000"/>
+            <column name="length" valueNumeric="6000"/>
+            <column name="floor_load_capacity" valueNumeric="2400"/>
+            <column name="voltage" valueNumeric="380"/>
+            <column name="available_power" valueNumeric="3500"/>
+            <column name="created" valueDate="2024-01-01T10:00:00"/>
+            <column name="updated" valueDate="2024-01-01T10:00:00"/>
+        </insert>
+        <insert tableName="workshops">
+            <column name="id" value="db6836eb-b356-49e5-a8ae-54ede841b7df"/>
+            <column name="code" value="UA-1994"/>
+            <column name="height" valueNumeric="7000"/>
+            <column name="width" valueNumeric="20000"/>
+            <column name="length" valueNumeric="30000"/>
+            <column name="floor_load_capacity" valueNumeric="2700"/>
+            <column name="voltage" valueNumeric="220"/>
+            <column name="available_power" valueNumeric="10000"/>
+            <column name="created" valueDate="2024-01-01T10:00:00"/>
+            <column name="updated" valueDate="2024-01-01T10:00:00"/>
+        </insert>
+        <insert tableName="workshops">
+            <column name="id" value="84c47820-0857-4bdc-9b77-ecad5a6e73a5"/>
+            <column name="code" value="UA-1995"/>
+            <column name="height" valueNumeric="6000"/>
+            <column name="width" valueNumeric="22000"/>
+            <column name="length" valueNumeric="15000"/>
+            <column name="floor_load_capacity" valueNumeric="3000"/>
+            <column name="voltage" valueNumeric="380"/>
+            <column name="available_power" valueNumeric="8000"/>
+            <column name="created" valueDate="2024-01-01T10:00:00"/>
+            <column name="updated" valueDate="2024-01-01T10:00:00"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
