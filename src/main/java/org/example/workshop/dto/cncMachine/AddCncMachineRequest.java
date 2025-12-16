@@ -14,6 +14,9 @@ import java.util.UUID;
 public class AddCncMachineRequest {
     @NotNull
     private UUID workshopId;
+    private String maker;
+    private String countryOfOrigin;
+    private String model;
     @NotNull
     @Positive
     private Double length;
@@ -32,4 +35,7 @@ public class AddCncMachineRequest {
     @NotNull
     @Positive
     private Integer maxPowerConsumption;
+    private Double tableWorkArea;
+    private String operatingSystem;
+    private String commandLanguage;
 }

@@ -6,12 +6,18 @@ import org.example.workshop.model.CncMachine;
 public class CncMachineMapper {
     public static CncMachine addDtoToEntity(AddCncMachineRequest request) {
         CncMachine entity = new CncMachine();
+        entity.setModel(request.getModel());
+        entity.setMaker(request.getMaker());
+        entity.setCountryOfOrigin(request.getCountryOfOrigin());
         entity.setLength(request.getLength());
         entity.setHeight(request.getHeight());
         entity.setWidth(request.getWidth());
         entity.setWeight(request.getWeight());
         entity.setVoltage(request.getVoltage());
         entity.setMaxPowerConsumption(request.getMaxPowerConsumption());
+        entity.setCommandLanguage(request.getCommandLanguage());
+        entity.setOperatingSystem(request.getOperatingSystem());
+        entity.setTableWorkArea(request.getTableWorkArea());
         return entity;
     }
 
